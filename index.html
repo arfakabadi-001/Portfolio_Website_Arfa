@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arfa Kabadi – Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Arfa Kabadi: React frontends, Python and Flask backends, and AI features.">
+
+  <!-- Bootstrap 5 and font (loaded from the internet) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Your own styles -->
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<!-- data-bs-spy makes Bootstrap highlight the menu link of the section you are viewing -->
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="-40% 0px -55% 0px" tabindex="0">
+
+<!-- ========== NAVBAR ========== -->
+<header class="sticky-top site-header">
+  <nav class="navbar navbar-expand-md container" id="mainNav">
+    <a class="navbar-brand logo" href="#home">Arfa Kabadi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+      <ul class="navbar-nav gap-md-1">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+<!-- ========== HERO ========== -->
+<section id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="hello">Open to internships and junior roles</span>
+        <h1>Hi, I’m Arfa Kabadi.</h1>
+        <p class="line">I build <span id="word">responsive React interfaces</span>.</p>
+        <p class="text-muted-custom mb-4">Computer Engineering student from Mumbai. I design and code complete products: the screens people use and the Python backends behind them.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-main" href="#projects">See my projects</a>
+          <a class="btn btn-line" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <!-- Browser window drawn with HTML and CSS only -->
+      <div class="col-lg-6" aria-hidden="true">
+        <div class="browser">
+          <div class="bar"><i style="background:#FF8A80"></i><i style="background:#FFD54F"></i><i style="background:#69DB9B"></i></div>
+          <div class="p-4">
+<div class="code"><b>function</b> <u>Portfolio</u>() {
+  <b>return</b> (
+    &lt;Developer
+      name="Arfa"
+      stack={["React", "Flask"]}
+      ready={<u>true</u>}
+    /&gt;
+  );
+}</div>
+            <div class="row g-3 mt-1">
+              <div class="col-6"><div class="mini" style="background:var(--blue)">React + Bootstrap<span>Frontend</span></div></div>
+              <div class="col-6"><div class="mini" style="background:var(--peach)">Flask + SQLite<span>Backend</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about">
+  <div class="container">
+    <h2>About me</h2>
+    <p class="sub">A developer who cares how things look, and how they work.</p>
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <p>I’m a Computer Engineering diploma student at M.H. Saboo Siddik Polytechnic. I enjoy turning an idea into a real, working product, from the design in Figma to a deployed website.</p>
+        <p>I completed a web development internship at HertzSoft Technologies, where I was named Star Intern 2026. Next semester I will build Sortix, a courier management system, as an industry project with H.G. Hawa &amp; Co.</p>
+        <p>Outside code, I compete in technical paper presentations, debates and poster events, so I can explain my work clearly as well as build it.</p>
+      </div>
+      <div class="col-lg-5">
+        <div class="facts">
+          <h3>Quick facts</h3>
+          <ul class="mb-0">
+            <li>Based in Mumbai, India</li>
+            <li>Diploma expected in 2027</li>
+            <li>Latest semester: 92.94%</li>
+            <li>Letter of Recommendation from HertzSoft</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROJECTS (cards are created by script.js) ========== -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="sub">Websites and tools I’ve built, and what’s coming next. Use the filters to explore.</p>
+    <div class="filters d-flex flex-wrap gap-2 mb-4" id="filters">
+      <button class="on" data-filter="all">All</button>
+      <button data-filter="frontend">Frontend</button>
+      <button data-filter="python">Python and Flask</button>
+      <button data-filter="ai">AI</button>
+      <button data-filter="upcoming">Upcoming</button>
+    </div>
+    <div class="row g-4" id="projectGrid"></div>
+  </div>
+</section>
+
+<!-- ========== EXPERIENCE ========== -->
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+    <p class="sub">Real teams, real clients, and what I’m working towards.</p>
+    <div class="timeline">
+      <div class="job">
+        <div class="when">Jun 2026 – Aug 2026</div>
+        <h3>Web Development Intern</h3>
+        <p class="org">HertzSoft Technologies Pvt. Ltd.</p>
+        <ul>
+          <li>Built responsive websites and interactive web apps using HTML, CSS, JavaScript, Bootstrap and React.js, with exposure to Flask and generative-AI integration.</li>
+          <li>Named Star Intern 2026 and Performer of the Month (June and August), and received a Letter of Recommendation.</li>
+        </ul>
+      </div>
+      <div class="job next">
+        <div class="when">Next semester</div>
+        <h3>Industry Project: Sortix</h3>
+        <p class="org">H.G. Hawa &amp; Co.</p>
+        <ul>
+          <li>A courier management and sorting solution for small and medium-sized courier hubs and e-commerce operations.</li>
+          <li>I will build the interface in React and add machine learning once I cover it in my coursework.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SKILLS ========== -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <p class="sub">What I use to take a product from design to deployment.</p>
+    <div class="row g-4">
+      <div class="col-md-6"><div class="skill" style="background:var(--blue)"><h3>Frontend</h3><div class="chips"><span>React.js</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div></div></div>
+      <div class="col-md-6"><div class="skill" style="background:var(--peach)"><h3>UI and design</h3><div class="chips"><span>Figma</span><span>Bootstrap</span><span>Tailwind CSS</span><span>Responsive design</span></div></div></div>
+      <div class="col-md-6"><div class="skill" style="background:var(--mint)"><h3>Backend and data</h3><div class="chips"><span>Python</span><span>Flask</span><span>MongoDB</span><span>SQLite</span><span>Oracle SQL</span></div></div></div>
+      <div class="col-md-6"><div class="skill" style="background:var(--butter)"><h3>AI and other languages</h3><div class="chips"><span>OCR</span><span>AI integration</span><span>Java</span><span>C and C++</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ACHIEVEMENTS ========== -->
+<section class="pt-0">
+  <div class="container">
+    <h2>Achievements</h2>
+    <p class="sub">Competitions, papers and events.</p>
+    <div class="row g-3">
+      <div class="col-md-6"><div class="win"><b>Technophilia 2026</b><span>1st Prize, Technical Paper Presentation and Debate</span></div></div>
+      <div class="col-md-6"><div class="win"><b>Techsphere 2K26 (state level)</b><span>Winner, Poster Presentation. 1st Runner-up, Elocution. 2nd Runner-up, Model Making</span></div></div>
+      <div class="col-md-6"><div class="win"><b>Techsphere 2K25 (state level)</b><span>Winner, Elocution and Poster Presentation</span></div></div>
+      <div class="col-md-6"><div class="win"><b>Prophet for All International Conference</b><span>Best Paper Award</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="pt-0">
+  <div class="container">
+    <div class="contact">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h2>Let’s work together</h2>
+          <p class="sub">I’m looking for internships and junior frontend or full-stack roles. Send me a message and I’ll reply soon.</p>
+          <div class="d-flex flex-wrap align-items-center gap-2 fw-bold mb-3">
+            <span class="email">arfakabadi200811@gmail.com</span>
+            <button class="copy" id="copy" type="button">Copy email</button>
+          </div>
+          <div class="d-flex flex-wrap gap-3 fw-semibold">
+            <a href="https://github.com/arfakabadi-001" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/arfa-kabadi" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="tel:+919920799454">+91 99207 99454</a>
+          </div>
+        </div>
+
+        <!-- No backend needed: the form opens the visitor's email app with the message filled in -->
+        <div class="col-lg-6">
+          <form id="form">
+            <div class="mb-3"><label class="form-label" for="fname">Your name</label><input class="form-control" id="fname" required></div>
+            <div class="mb-3"><label class="form-label" for="femail">Your email</label><input class="form-control" id="femail" type="email" required></div>
+            <div class="mb-3"><label class="form-label" for="fmsg">Message</label><textarea class="form-control" id="fmsg" rows="4" required></textarea></div>
+            <button class="btn btn-send" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="text-center">© 2026 Arfa Kabadi. Designed and coded by me.</footer>
+
+<!-- Bootstrap JavaScript (needed for the mobile menu and menu highlight), then your script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

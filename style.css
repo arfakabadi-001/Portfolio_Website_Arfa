@@ -1,0 +1,463 @@
+/* ========== 1. COLORS AND BASICS (change the theme here) ========== */
+:root {
+  --bg: #fbfaff;
+  --card: #ffffff;
+  --ink: #1e2142;
+  --muted: #5e6385;
+  --line: #e6e5f2;
+  --brand: #4c5cff;
+  --blue: #e8ebff;
+  --peach: #ffe9de;
+  --mint: #ddf4e8;
+  --butter: #fff3c9;
+  --lilac: #f3e6ff;
+  --font: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.65 var(--font);
+}
+a {
+  color: inherit;
+}
+section {
+  padding: 80px 0;
+}
+.pt-0 {
+  padding-top: 0;
+}
+h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0 0 12px;
+  font-weight: 800;
+}
+.sub {
+  color: var(--muted);
+  max-width: 54ch;
+  margin: 0 0 40px;
+}
+.text-muted-custom {
+  color: var(--muted);
+  max-width: 48ch;
+}
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ========== 2. NAVBAR ========== */
+.site-header {
+  background: rgba(251, 250, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+.navbar-nav .nav-link {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.navbar-nav .nav-link:hover {
+  background: var(--blue);
+  color: var(--ink);
+}
+.navbar-nav .nav-link.active {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* ========== 3. BUTTONS ========== */
+.btn-main,
+.btn-line,
+.btn-send {
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 15px;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.btn-main {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-line {
+  background: transparent;
+  color: var(--ink);
+}
+.btn-send {
+  background: var(--butter);
+  color: var(--ink);
+  border-color: var(--butter);
+}
+.btn-main:hover,
+.btn-line:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+  color: black  ;
+  
+}
+.btn-main:hover {
+  color: black;
+  background: #b9c3ee;
+}
+.btn-send:hover {
+  background: #fff;
+  color: var(--ink);
+}
+
+/* ========== 4. HERO ========== */
+.hero {
+  padding: 64px 0 56px;
+}
+.hello {
+  display: inline-block;
+  background: var(--mint);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(40px, 6.4vw, 70px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.hero .line {
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 600;
+  margin-bottom: 16px;
+  min-height: 2.6em;
+}
+#word {
+  color: var(--brand);
+  transition: opacity 0.3s;
+}
+
+/* Browser window made with CSS */
+.browser {
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: 8px 8px 0 var(--ink);
+  overflow: hidden;
+}
+.bar {
+  display: flex;
+  gap: 7px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--ink);
+  background: var(--butter);
+}
+.bar i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  display: block;
+}
+.code {
+  background: var(--ink);
+  color: #dde1ff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  font:
+    500 13.5px/1.7 Consolas,
+    Menlo,
+    monospace;
+  overflow-x: auto;
+  white-space: pre;
+}
+.code b {
+  color: #ffb38a;
+  font-weight: 500;
+}
+.code u {
+  color: #8fe3b5;
+  text-decoration: none;
+}
+.mini {
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.mini span {
+  display: block;
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ========== 5. ABOUT ========== */
+.facts {
+  background: var(--lilac);
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  padding: 24px;
+}
+.facts h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.facts li {
+  margin-bottom: 8px;
+}
+
+/* ========== 6. PROJECTS ========== */
+.filters button {
+  font: 600 15px var(--font);
+  border: 2px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  padding: 9px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filters button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.filters button.on {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.project {
+  height: 100%;
+  border: 2px solid var(--ink);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  animation: pop 0.35s ease;
+}
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+.project small {
+  font-weight: 700;
+  opacity: 0.7;
+}
+.project h3 {
+  margin: 6px 0 10px;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+.project p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.soon {
+  align-self: flex-start;
+  background: var(--ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0;
+  margin: auto 0 18px;
+  list-style: none;
+}
+.tags li {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 11px;
+}
+.plinks {
+  display: flex;
+  gap: 18px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* ========== 7. EXPERIENCE ========== */
+.timeline {
+  border-left: 3px solid var(--ink);
+  margin-left: 8px;
+  padding-left: 30px;
+  display: grid;
+  gap: 34px;
+}
+.job {
+  position: relative;
+}
+.job::before {
+  content: "";
+  position: absolute;
+  left: -41px;
+  top: 7px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--brand);
+  border: 3px solid var(--ink);
+}
+.job.next::before {
+  background: var(--bg);
+}
+.job .when {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.job h3 {
+  margin: 2px 0;
+  font-size: 21px;
+  font-weight: 700;
+}
+.job .org {
+  color: var(--muted);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.job ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.job li {
+  margin-bottom: 6px;
+  max-width: 62ch;
+}
+
+/* ========== 8. SKILLS ========== */
+.skill {
+  height: 100%;
+  border: 2px solid var(--ink);
+  border-radius: 20px;
+  padding: 24px;
+}
+.skill h3 {
+  margin: 0 0 14px;
+  font-size: 19px;
+  font-weight: 700;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chips span {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 4px 12px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+/* ========== 9. ACHIEVEMENTS ========== */
+.win {
+  height: 100%;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+.win b {
+  display: block;
+}
+.win span {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ========== 10. CONTACT ========== */
+.contact {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 28px;
+  padding: clamp(28px, 5vw, 56px);
+}
+.contact h2 {
+  color: #fff;
+}
+.contact .sub {
+  color: #b9bee0;
+}
+.contact .email {
+  word-break: break-all;
+}
+.contact .form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #dde1ff;
+}
+.contact .form-control {
+  border-radius: 12px;
+  border: 2px solid transparent;
+  padding: 12px 14px;
+}
+.contact .form-control:focus {
+  border-color: var(--butter);
+  box-shadow: none;
+}
+.copy {
+  background: var(--butter);
+  color: var(--ink);
+  border: 0;
+  border-radius: 10px;
+  padding: 7px 14px;
+  font: 700 14px var(--font);
+  cursor: pointer;
+}
+
+footer {
+  padding: 32px 0 44px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Respect people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
