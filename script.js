@@ -46,7 +46,7 @@ const projects = [
     text: "A responsive, OTT-inspired movie platform with a modern interface and an interactive frontend.",
     tags: ["JavaScript", "HTML5", "CSS3", "Bootstrap"],
     links: [
-      ["Live site", "https://arfakabadi-001.github.io/cineverse-movieplatform"],
+      ["Live site", "https://arfakabadi-001.github.io/cineverse-movie-platform/"],
       ["GitHub", "https://github.com/arfakabadi-001/cineverse-movie-platform"]
     ]
   },
